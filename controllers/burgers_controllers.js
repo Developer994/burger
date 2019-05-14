@@ -19,9 +19,8 @@ app.post('/burgers/update', function (req, res) {
     });
 });
 
-app.put('/burgers/create', function (req, res) {
-    burger.create(req.body.burger_id, function (result) {
-        console.log(result);
+app.post('/burger/create', function (req, res) {
+    burger.create(req.body.burger_name, function (result) {
         res.redirect('/');
     });
 });
